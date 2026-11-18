@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IntelliRoute Explorer - Intelligent Route Optimization</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <style>
+    .hero-container {
+      max-width: 680px;
+      text-align: center;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #38bdf8 0%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-desc {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+    .hero-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 36px 0;
+      text-align: left;
+    }
+    .feature-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+    .feature-card h4 {
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-wrapper">
+    <div class="hero-container">
+      <div class="brand-badge">📍 ALL-INDIA MULTI-FACTOR ROUTE OPTIMIZATION</div>
+      <h1 class="hero-title">INTELLIROUTE EXPLORER</h1>
+      <p class="hero-desc">
+        Intelligent multi-factor route optimization platform across India powered by genuine OSRM routing, Open-Meteo time-aware atmospheric telemetry, and TomTom traffic flow analysis.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="login.html" class="btn btn-primary" style="min-width: 160px;">LOGIN</a>
+        <a href="register.html" class="btn btn-accent" style="min-width: 160px;">REGISTER</a>
+        <a href="dashboard.html" class="btn btn-outline" style="min-width: 160px;">EXPLORE DEMO</a>
+      </div>
+
+      <div class="hero-features">
+        <div class="feature-card">
+          <h4>🗺️ Pan-India Coverage</h4>
+          <p>Seamless geocoding and routing across all Indian States & Union Territories with boundary verification.</p>
+        </div>
+        <div class="feature-card">
+          <h4>⚡ Genuine Multi-Route OSRM</h4>
+          <p>Calculates up to 3 legitimate route alternatives with real GeoJSON geometry.</p>
+        </div>
+        <div class="feature-card">
+          <h4>🌦️ Segment Telemetry</h4>
+          <p>Multi-factor scoring across Distance, Time, Segment Traffic, and Arrival-Time Weather Forecasts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (Auth.isAuthenticated()) {
+        window.location.href = 'dashboard.html';
+      }
+    });
+  </script>
+</body>
+</html>
