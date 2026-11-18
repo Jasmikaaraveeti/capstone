@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - IntelliRoute Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <div class="auth-header">
+        <div class="brand-badge">📍 ALL-INDIA ROUTE OPTIMIZATION</div>
+        <h1 class="auth-title">Welcome Back</h1>
+        <p class="auth-subtitle">Login to your IntelliRoute account</p>
+      </div>
+
+      <div id="alertBox" class="alert" style="display: none;"></div>
+
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input type="email" id="email" class="form-input" placeholder="name@example.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <input type="password" id="password" class="form-input" placeholder="Enter your password" required autocomplete="current-password">
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn btn-primary btn-submit">
+          LOGIN
+        </button>
+      </form>
+
+      <div class="auth-footer">
+        <div style="margin-bottom: 8px; font-size: 0.8rem; color: var(--text-muted);">
+          Demo Credentials: <a href="javascript:void(0)" onclick="document.getElementById('email').value='admin@intelliroute.in';document.getElementById('password').value='Admin@123';" style="color: #38bdf8; text-decoration: underline;">admin@intelliroute.in / Admin@123 (Click to fill)</a>
+        </div>
+        Don't have an account? <a href="register.html">Register</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
